@@ -17,8 +17,9 @@ WIN_COMBINATIONS = [
 
 def won? board
   board.each do |win_array|
-    if win_array.all? { |pos| pos == "X" } || win_array.all? { |pos| pos == "O" }
-      
+    if {win_array.all? { |pos| pos == "X" } || win_array.all? { |pos| pos == "O" }}
+      return win_array
     end
-  end  
+  end
+  return false
 end
