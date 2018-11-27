@@ -14,3 +14,11 @@ WIN_COMBINATIONS = [
   [0, 4, 8],
   [2, 4, 6]
 ]
+
+def won? board
+  board.each do |win_array|
+    if win_array.all? { |pos| pos == "X" } || win_array.all? { |pos| pos == "O" }
+      
+    end
+  end  
+end
